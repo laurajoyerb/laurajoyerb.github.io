@@ -1069,6 +1069,7 @@ body.offcanvas {
     color: white;
     font-family: "Quicksand", Arial, sans-serif;
     width: 100%;
+    text-transform: uppercase;
     font-weight: 700;
     margin-bottom: .3em; }
   .colorlib-counters .colorlib-counter-label {
