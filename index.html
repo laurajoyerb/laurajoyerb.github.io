@@ -142,7 +142,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 										<span class="heading-meta">About Me</span>
 										<h2 class="colorlib-heading">Who Am I?</h2>
 										<p>
-                                            <strong>I'm a software engineer, an Alaskan pilot, and a leader.</strong>
+                                            <strong>I'm a software engineer, an Alaskan, and a leader.</strong>
                                             I grew up in a small town called Chugiak, Alaska. 
                                         </p>
                                         <p>
@@ -721,21 +721,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="col-md-7 col-md-push-1">
 							<div class="row">
 								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
-									<form action="http://formspree.io/laurajoyerb@gmail.com" method="post">
+									<form action="">
 										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Name">
+											<input type="text" class="form-control" placeholder="Name" id="name">
 										</div>
+										<!-- <div class="form-group">
+											<input type="email" class="form-control" placeholder="Email" id="email">
+										</div> -->
 										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Email">
-										</div>
-										<div class="form-group">
-											<input type="text" class="form-control" placeholder="Subject">
+											<input type="text" class="form-control" placeholder="Subject" id="subject">
 										</div>
 										<div class="form-group">
 											<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
 										</div>
 										<div class="form-group">
-											<input type="submit" class="btn btn-primary btn-send-message" value="Send Messageee">
+											<input type="submit" onclick="sendEmail()" class="btn btn-primary btn-send-message" value="Send Message">
 										</div>
 									</form>
 								</div>
@@ -749,6 +749,18 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div><!-- end:colorlib-main -->
 	</div><!-- end:container-wrap -->
 	</div><!-- end:colorlib-page -->
+
+	<script type="text/javascript">
+		function sendEmail() {
+			var name = document.getElementById('name').value;
+			var subject = document.getElementById('subject').value;
+			var msg = document.getElementById('message').value;
+			document.getElementById('name').value = "";
+			document.getElementById('subject').value = "";
+			document.getElementById('message').value = "";
+			window.location.href = "mailto:laurajoyerb@gmail.com?subject=" + subject + "&body=" + msg;
+		}
+	</script>
 
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
