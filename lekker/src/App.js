@@ -1,9 +1,10 @@
-import './App.css';
+import './root.css';
+import Header from './Header';
 
 function App() {
   return (
     <div className="App">
-      <img className="header" src="./images/header.png" alt="lekker cabinet logo" />
+      <Header />
     </div>
   );
 }
