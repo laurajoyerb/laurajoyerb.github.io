@@ -17,3 +17,7 @@
   font-size: calc(10px + 2vmin);
   color: var(--text);
 }
+
+.header {
+  max-width: 80%;
+}
