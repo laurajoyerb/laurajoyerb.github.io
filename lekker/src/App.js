@@ -2,8 +2,9 @@
 
 import './root.css';
 import Header from './Header';
+import React from "react";
 
-function App() {
+function App(): React$Node {
   return (
     <div className="App">
       <Header />

@@ -1,5 +1,9 @@
+// @flow
+
 import './root.css';
 
-export default function Header() {
+import React from "react";
+
+export default function Header(): React$Node {
     return <img className="header" src="./images/header.png" alt="lekker cabinet logo" />;
 }
