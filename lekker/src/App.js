@@ -1,3 +1,5 @@
+// @flow
+
 import './root.css';
 import Header from './Header';
 
