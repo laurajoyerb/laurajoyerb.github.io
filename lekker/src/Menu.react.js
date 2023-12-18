@@ -1,8 +1,6 @@
 // @flow
 
-import { css } from '@emotion/css';
 import React from 'react';
-import { use } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { cocktails } from './Cocktails';

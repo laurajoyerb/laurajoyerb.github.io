@@ -1,9 +1,6 @@
 // @flow
 
-import { css } from '@emotion/css';
 import React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import type { Cocktail } from './Types';
 
 type Props = $ReadOnly<{
@@ -19,7 +16,3 @@ export default function DrinksList({ drinks }: Props): React$Node {
     </ul>
   );
 }
-
-// Styles
-
-const styles = {};
