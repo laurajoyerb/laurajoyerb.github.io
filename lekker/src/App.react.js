@@ -1,8 +1,8 @@
 // @flow
 
 import './root.css';
-import Header from './Header';
-import React from "react";
+import Header from './Header.react';
+import React from 'react';
 
 function App(): React$Node {
   return (
