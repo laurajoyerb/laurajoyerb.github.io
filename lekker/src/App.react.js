@@ -5,12 +5,14 @@ import React from 'react';
 import Definition from './Definition.react';
 import './colorConstants.css';
 import { css } from '@emotion/css';
+import Menu from './Menu.react';
 
 export default function App(): React$Node {
   return (
     <div className={styles.root}>
       <Header />
       <Definition />
+      <Menu />
     </div>
   );
 }
