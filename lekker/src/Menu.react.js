@@ -2,40 +2,50 @@
 
 import { css } from '@emotion/css';
 import React from 'react';
+import { use } from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-
-type TabOptions = 'Signature' | 'Others' | 'Non-Alcoholic';
+import { cocktails } from './Cocktails';
+import type { Cocktail } from './Types';
+import DrinksList from './DrinksList.react';
 
 export default function Menu(): React$Node {
   const [tab, setTab] = React.useState('Signature');
 
+  const filteredDrinks = useFilteredDrinks(tab);
+
   return (
-    <Tabs
-      value={tab}
-      onChange={(_, tab) => setTab(tab)}
-      textColor="secondary"
-      indicatorColor="secondary">
-      {['Signature', 'Others', 'Non-Alcoholic'].map((item) => {
-        return <Tab value={item} label={item} />;
-      })}
-    </Tabs>
+    <>
+      <Tabs
+        value={tab}
+        onChange={(_, tab) => setTab(tab)}
+        textColor="secondary"
+        indicatorColor="secondary">
+        {['Signature', 'Others', 'Non-Alcoholic'].map((item) => {
+          return <Tab value={item} label={item} />;
+        })}
+      </Tabs>
+      <DrinksList drinks={filteredDrinks} />
+    </>
   );
 }
 
-// Styles
+// Helpers
 
-const styles = {
-  root: css`
-    display: grid;
-    grid-template-columns: 20% auto;
-    align-items: center;
-    font-size: 15px;
-    padding: 15px;
-  `,
-  text: css`
-    border-left: 1px solid var(--purple);
-    text-align: left;
-    padding-left: 10px;
-  `,
-};
+function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
+  switch (tab) {
+    case 'Signature':
+      return cocktails.filter(
+        (cocktail: Cocktail) => cocktail.signature === true,
+      );
+    case 'Non-Alcoholic':
+      return cocktails.filter(
+        (cocktail: Cocktail) => cocktail.nonalcoholic === true,
+      );
+    case 'Others':
+    default:
+      return cocktails.filter(
+        (cocktail: Cocktail) => cocktail.nonalcoholic === false,
+      );
+  }
+}
