@@ -10,6 +10,11 @@ import Menu from './Menu.react';
 export default function App(): React$Node {
   return (
     <div className={styles.root}>
+      <img
+        className={styles.flower1}
+        src="./images/flowers1.png"
+        alt="lekker cabinet logo"
+      />
       <Header />
       <Definition />
       <Menu />
@@ -29,5 +34,13 @@ const styles = {
     align-items: center;
     font-size: calc(10px + 2vmin);
     color: var(--text);
+  `,
+  flower1: css`
+    position: absolute;
+    max-height: 30%;
+    max-width: 50%;
+    top: -5%;
+    opacity: 65%;
+    left: -2%;
   `,
 };
