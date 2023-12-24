@@ -7,7 +7,7 @@ export default function Header(): React$Node {
   return (
     <img
       className={styles.root}
-      src="./images/header.png"
+      src="./images/mobileheader.png"
       alt="lekker cabinet logo"
     />
   );
@@ -17,7 +17,7 @@ export default function Header(): React$Node {
 
 const styles = {
   root: css`
-    padding-top: 20%;
-    max-width: 80%;
+    padding-top: 75px;
+    max-width: 80vw;
   `,
 };

@@ -42,18 +42,18 @@ const styles = {
   `,
   flower1: css`
     position: fixed;
-    max-height: 30%;
-    max-width: 50%;
-    top: -5%;
+    max-height: 30vh;
+    max-width: 50vw;
+    top: -5vh;
     opacity: 65%;
-    left: -2%;
+    left: -2vw;
   `,
   flower2: css`
     position: fixed;
-    max-height: 30%;
-    max-width: 50%;
-    top: 80%;
+    max-height: 30vh;
+    max-width: 50vw;
+    top: 80vh;
     opacity: 65%;
-    right: -2%;
+    right: -2vw;
   `,
 };

@@ -24,7 +24,7 @@ export default function Definition(): React$Node {
 const styles = {
   root: css`
     display: grid;
-    grid-template-columns: 20% auto;
+    grid-template-columns: 20vw auto;
     align-items: center;
     font-size: 11px;
     padding: 15px;
