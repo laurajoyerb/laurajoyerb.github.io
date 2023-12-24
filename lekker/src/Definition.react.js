@@ -26,7 +26,7 @@ const styles = {
     display: grid;
     grid-template-columns: 20% auto;
     align-items: center;
-    font-size: 15px;
+    font-size: 11px;
     padding: 15px;
   `,
   text: css`

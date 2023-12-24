@@ -17,7 +17,7 @@ export default function Header(): React$Node {
 
 const styles = {
   root: css`
-    padding-top: 10vh;
+    padding-top: 20%;
     max-width: 80%;
   `,
 };
