@@ -12,14 +12,14 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   },
   {
     name: 'Negroni',
-    ingredients: ['Gin', 'sweet vermouth', 'campari'],
+    ingredients: ['gin', 'sweet vermouth', 'campari'],
     strength: 3,
     signature: true,
     nonalcoholic: false,
   },
   {
     name: 'Queen Elizabeth',
-    ingredients: ['Gold rum', 'lime juice', 'grenadine'],
+    ingredients: ['rum', 'lime juice', 'grenadine'],
     strength: 3,
     signature: true,
     nonalcoholic: false,
@@ -27,11 +27,11 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   {
     name: 'Long Island Iced Tea',
     ingredients: [
-      'Gin',
+      'gin',
       'tequila',
       'vodka',
       'rum',
-      'cointreau',
+      'Cointreau',
       'simple syrup',
       'lemon juice',
       'cola',
@@ -81,7 +81,7 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   },
   {
     name: 'The LJ 75',
-    ingredients: ['Gin', 'champagne', 'lemon juice', 'elderflower liqueur'],
+    ingredients: ['gin', 'champagne', 'lemon juice', 'elderflower liqueur'],
     strength: 2,
     signature: true,
     nonalcoholic: false,
@@ -89,7 +89,7 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   {
     name: 'Gin Daisy',
     ingredients: [
-      'Gin',
+      'gin',
       'lemon juice',
       'grenadine',
       'simple syrup',
@@ -106,160 +106,146 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
     signature: false,
     nonalcoholic: false,
   },
-  // ... (similar objects for the remaining cocktails)
-];
-
-const additionalCocktailsData = [
   {
     name: 'Rob Roy',
-    ingredients: ['Whiskey', 'sweet vermouth', 'angostura bitters'],
+    ingredients: ['whiskey', 'sweet vermouth', 'angostura bitters'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Old Pal',
-    ingredients: ['Whiskey', 'dry vermouth', 'campari'],
+    ingredients: ['whiskey', 'dry vermouth', 'campari'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Boulevardier',
-    ingredients: ['Whiskey', 'Sweet vermouth', 'campari'],
+    ingredients: ['whiskey', 'sweet vermouth', 'campari'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Manhattan',
-    ingredients: ['Whiskey', 'sweet vermouth', 'angostura bitters'],
+    ingredients: ['whiskey', 'sweet vermouth', 'angostura bitters'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'El Presidente',
-    ingredients: ['White rum', 'dry vermouth', 'cointreau', 'grenadine'],
+    ingredients: ['white rum', 'dry vermouth', 'Cointreau', 'grenadine'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Bacardi Cocktail',
-    ingredients: ['Rum', 'lime juice', 'grenadine'],
+    ingredients: ['rum', 'lime juice', 'grenadine'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Kamikaze',
-    ingredients: ['Vodka', 'cointreau', 'lime juice'],
+    ingredients: ['vodka', 'Cointreau', 'lime juice'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Black Russian',
-    ingredients: ['Vodka', 'coffee liqueur'],
+    ingredients: ['vodka', 'coffee liqueur'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: "Devil's Torch",
-    ingredients: ['Vodka', 'dry vermouth', 'grenadine'],
+    ingredients: ['vodka', 'dry vermouth', 'grenadine'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Mudslide Shot',
-    ingredients: ['Vodka', 'Irish cream liqueur', 'coffee liqueur'],
+    ingredients: ['vodka', 'Irish cream liqueur', 'coffee liqueur'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
-];
-
-console.log(additionalCocktailsData);
-
-const additionalCocktailsData2 = [
   {
     name: 'Gin and It',
-    ingredients: ['Gin', 'sweet vermouth', 'angostura bitters'],
+    ingredients: ['gin', 'sweet vermouth', 'angostura bitters'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'The Vampire',
-    ingredients: ['Gin', 'dry vermouth', 'lime juice'],
+    ingredients: ['gin', 'dry vermouth', 'lime juice'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'White Lady',
-    ingredients: ['Gin', 'cointreau', 'lemon juice'],
+    ingredients: ['gin', 'Cointreau', 'lemon juice'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Gin Sour',
-    ingredients: ['Gin', 'lemon juice', 'simple syrup'],
+    ingredients: ['gin', 'lemon juice', 'simple syrup'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Royal Romance',
-    ingredients: ['Gin', 'cointreau', 'grenadine'],
+    ingredients: ['gin', 'Cointreau', 'grenadine'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Upside-down martini',
-    ingredients: ['Dry vermouth', 'gin'],
+    ingredients: ['dry vermouth', 'gin'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: "Devil's Own",
-    ingredients: ['Gin', 'dry vermouth', 'cointreau', 'angostura bitters'],
+    ingredients: ['gin', 'dry vermouth', 'Cointreau', 'angostura bitters'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Gibson',
-    ingredients: ['Gin', 'dry vermouth'],
+    ingredients: ['gin', 'dry vermouth'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Margarita',
-    ingredients: ['Tequila', 'cointreau', 'lime juice'],
+    ingredients: ['tequila', 'Cointreau', 'lime juice'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Mexican Firing squad',
-    ingredients: ['Tequila', 'lime juice', 'grenadine', 'angostura bitters'],
+    ingredients: ['tequila', 'lime juice', 'grenadine', 'angostura bitters'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
   },
-];
-
-console.log(additionalCocktailsData2);
-
-const additionalCocktailsData3 = [
   {
     name: 'B52',
     ingredients: ['Cointreau', 'coffee liqueur', 'Irish cream liqueur'],
@@ -269,82 +255,77 @@ const additionalCocktailsData3 = [
   },
   {
     name: 'Gimlet',
-    ingredients: ['Gin', 'lime juice', 'simple syrup'],
+    ingredients: ['gin', 'lime juice', 'simple syrup'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Fitzgerald',
-    ingredients: ['Gin', 'lemon juice', 'simple syrup', 'angostura bitters'],
+    ingredients: ['gin', 'lemon juice', 'simple syrup', 'angostura bitters'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Gin Rickey',
-    ingredients: ['Gin', 'lime juice', 'simple syrup', 'club soda'],
+    ingredients: ['gin', 'lime juice', 'simple syrup', 'club soda'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Bitter French',
-    ingredients: ['Gin', 'campari', 'lemon juice', 'simple syrup', 'champagne'],
+    ingredients: ['gin', 'campari', 'lemon juice', 'simple syrup', 'champagne'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'French 75',
-    ingredients: ['Gin', 'champagne', 'lemon juice', 'simple syrup'],
+    ingredients: ['gin', 'champagne', 'lemon juice', 'simple syrup'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'American Flyer',
-    ingredients: ['Champagne', 'white rum', 'lime juice', 'sugar'],
+    ingredients: ['champagne', 'white rum', 'lime juice', 'sugar'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Daiquiri',
-    ingredients: ['White rum', 'lime juice', 'simple syrup'],
+    ingredients: ['white rum', 'lime juice', 'simple syrup'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Tipperary',
-    ingredients: ['Whiskey', 'sweet vermouth'],
+    ingredients: ['whiskey', 'sweet vermouth'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Americano',
-    ingredients: ['Campari', 'sweet vermouth', 'club soda'],
+    ingredients: ['campari', 'sweet vermouth', 'club soda'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
-];
-
-console.log(additionalCocktailsData3);
-
-const additionalCocktailsData4 = [
   {
     name: 'Addington Cocktail',
-    ingredients: ['Dry Vermouth', 'sweet vermouth', 'club soda'],
+    ingredients: ['dry vermouth', 'sweet vermouth', 'club soda'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Cuba Libre',
-    ingredients: ['White rum', 'lime juice', 'cola'],
+    ingredients: ['white rum', 'lime juice', 'cola'],
     strength: 1,
     signature: false,
     nonalcoholic: false,
@@ -358,7 +339,7 @@ const additionalCocktailsData4 = [
   },
   {
     name: 'Trinidad',
-    ingredients: ['Rum', 'cola', 'angostura bitters'],
+    ingredients: ['rum', 'cola', 'angostura bitters'],
     strength: 1,
     signature: false,
     nonalcoholic: false,
@@ -366,7 +347,7 @@ const additionalCocktailsData4 = [
   {
     name: 'Rome with a View',
     ingredients: [
-      'Campari',
+      'campari',
       'dry vermouth',
       'club soda',
       'lime juice',
@@ -379,7 +360,7 @@ const additionalCocktailsData4 = [
   {
     name: 'Bitter Intentions',
     ingredients: [
-      'Campari',
+      'campari',
       'dry vermouth',
       'club soda',
       'lemon juice',
@@ -391,7 +372,7 @@ const additionalCocktailsData4 = [
   },
   {
     name: 'Gin Fizz',
-    ingredients: ['Gin', 'lemon juice', 'club soda', 'simple syrup'],
+    ingredients: ['gin', 'lemon juice', 'club soda', 'simple syrup'],
     strength: 1,
     signature: false,
     nonalcoholic: false,
@@ -399,7 +380,7 @@ const additionalCocktailsData4 = [
   {
     name: 'Tom Collins',
     ingredients: [
-      'Gin',
+      'gin',
       'simple syrup',
       'lemon juice',
       'club soda',
@@ -412,7 +393,7 @@ const additionalCocktailsData4 = [
   {
     name: 'Lime Rickey',
     ingredients: [
-      'Lime juice',
+      'lime juice',
       'simple syrup',
       'angostura bitters',
       'club soda',
@@ -423,51 +404,44 @@ const additionalCocktailsData4 = [
   },
   {
     name: 'Pink Gin',
-    ingredients: ['Gin', 'angostura bitters'],
+    ingredients: ['gin', 'angostura bitters'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
-];
-
-console.log(additionalCocktailsData4);
-
-const additionalCocktailsData5 = [
   {
     name: 'Dry Martini',
-    ingredients: ['Gin', 'dry vermouth'],
+    ingredients: ['gin', 'dry vermouth'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Extra-dry Martini',
-    ingredients: ['Gin', 'more dry vermouth'],
+    ingredients: ['gin', 'dry vermouth'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'West Indian Cocktail',
-    ingredients: ['Gin', 'angostura bitters', 'lemon juice', 'sugar'],
+    ingredients: ['gin', 'angostura bitters', 'lemon juice', 'sugar'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Vesper',
-    ingredients: ['Gin', 'vodka', 'lillet blanc'],
+    ingredients: ['gin', 'vodka', 'lillet blanc'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Vodkatini',
-    ingredients: ['Vodka', 'dry vermouth'],
+    ingredients: ['vodka', 'dry vermouth'],
     strength: 4,
     signature: false,
     nonalcoholic: false,
   },
 ];
-
-console.log(additionalCocktailsData5);

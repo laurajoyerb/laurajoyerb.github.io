@@ -1,16 +1,15 @@
 // @flow
 
 export type Ingredient =
-  | 'Gin'
+  | 'gin'
   | 'sweet vermouth'
   | 'campari'
-  | 'Gold rum'
+  | 'gold rum'
   | 'lime juice'
   | 'grenadine'
   | 'tequila'
   | 'vodka'
   | 'rum'
-  | 'cointreau'
   | 'simple syrup'
   | 'lemon juice'
   | 'cola'
@@ -21,10 +20,9 @@ export type Ingredient =
   | 'club soda'
   | 'Cointreau'
   | 'dry vermouth'
-  | 'White rum'
+  | 'white rum'
   | 'Irish cream liqueur'
   | 'coffee liqueur'
-  | 'more dry vermouth'
   | 'lillet blanc'
   | 'St. Germain'
   | 'sugar';
