@@ -42,8 +42,10 @@ function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
       );
     case 'Others':
     default:
-      return cocktails.filter(
-        (cocktail: Cocktail) => cocktail.nonalcoholic === false,
-      );
+      return cocktails
+        .filter((cocktail: Cocktail) => cocktail.nonalcoholic === false)
+        .sort((a, b) =>
+          a.strength > b.strength ? 1 : a.strength == b.strength ? 0 : -1,
+        );
   }
 }

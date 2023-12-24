@@ -136,7 +136,7 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   },
   {
     name: 'El Presidente',
-    ingredients: ['white rum', 'dry vermouth', 'Cointreau', 'grenadine'],
+    ingredients: ['rum', 'dry vermouth', 'Cointreau', 'grenadine'],
     strength: 3,
     signature: false,
     nonalcoholic: false,
@@ -290,14 +290,14 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   },
   {
     name: 'American Flyer',
-    ingredients: ['champagne', 'white rum', 'lime juice', 'sugar'],
+    ingredients: ['champagne', 'rum', 'lime juice', 'sugar'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
   },
   {
     name: 'Daiquiri',
-    ingredients: ['white rum', 'lime juice', 'simple syrup'],
+    ingredients: ['rum', 'lime juice', 'simple syrup'],
     strength: 2,
     signature: false,
     nonalcoholic: false,
@@ -325,7 +325,7 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   },
   {
     name: 'Cuba Libre',
-    ingredients: ['white rum', 'lime juice', 'cola'],
+    ingredients: ['rum', 'lime juice', 'cola'],
     strength: 1,
     signature: false,
     nonalcoholic: false,
