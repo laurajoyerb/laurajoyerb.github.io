@@ -23,7 +23,7 @@ export default function Menu(): React$Node {
           return <Tab value={item} label={item} />;
         })}
       </Tabs>
-      <DrinksList drinks={filteredDrinks} />
+      <DrinksList drinks={filteredDrinks} tab={tab} />
     </>
   );
 }
@@ -45,7 +45,7 @@ function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
       return cocktails
         .filter((cocktail: Cocktail) => cocktail.nonalcoholic === false)
         .sort((a, b) =>
-          a.strength > b.strength ? 1 : a.strength == b.strength ? 0 : -1,
+          a.strength > b.strength ? 1 : a.strength === b.strength ? 0 : -1,
         );
   }
 }
