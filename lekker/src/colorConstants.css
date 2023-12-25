@@ -5,3 +5,7 @@
   --light-purple: #d4b2c8;
   --text: #343d61;
 }
+
+html {
+  background-color: var(--beige);
+}
