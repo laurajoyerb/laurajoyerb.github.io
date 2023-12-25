@@ -53,9 +53,25 @@ function getSections(
 ): $ReadOnlyArray<Section> {
   switch (tab) {
     case 'Signature':
-    case 'Non-Alcoholic':
     default:
       return [{ label: null, drinks: drinks }];
+    case 'Non-Alcoholic':
+      return [
+        {
+          label: 'Hot Beverages',
+          drinks: drinks.filter((drink) =>
+            ['Coffee', 'Tea', 'Hot Tang', 'Hot Cocoa'].includes(drink.name),
+          ),
+        },
+        {
+          label: 'Soda',
+          drinks: drinks.filter(
+            (drink) =>
+              !['Coffee', 'Tea', 'Hot Tang', 'Hot Cocoa'].includes(drink.name),
+          ),
+        },
+      ];
+
     case 'Others': {
       return [
         {
@@ -112,10 +128,11 @@ const styles = {
     gap: 14px;
     flex-direction: column;
     padding-bottom: 12px;
+    min-width: 100%;
   `,
   sectionHeader: css`
     text-align: start;
-    padding: 0px 12px;
+    padding: 0px 14px;
     font-size: 20px;
     font-weight: 600;
     display: flex;
