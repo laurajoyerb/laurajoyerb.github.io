@@ -1,8 +1,8 @@
 // @flow
 
 import React from 'react';
-import { cocktails } from './Cocktails';
-import type { Cocktail } from './Types';
+import { cocktails } from './../Cocktails';
+import type { Cocktail } from './../Types';
 import DrinksList from './DrinksList.react';
 import { Tab, tabClasses } from '@mui/base/Tab';
 import { Tabs } from '@mui/base/Tabs';

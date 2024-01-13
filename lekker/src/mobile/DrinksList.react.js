@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import type { Cocktail } from './Types';
+import type { Cocktail } from './../Types';
 import { css } from '@emotion/css';
 
 type Props = $ReadOnly<{
