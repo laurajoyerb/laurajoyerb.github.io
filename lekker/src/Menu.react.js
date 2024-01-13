@@ -25,7 +25,7 @@ export default function Menu(): React$Node {
             return (
               <div className={styles.tabOuter} key={item}>
                 <Tab className={styles.tab} value={item}>
-                  {item.toLocaleUpperCase()}
+                  {item}
                 </Tab>
                 {index + 1 === categories.length ? null : (
                   <div className={styles.divider} />
@@ -79,7 +79,7 @@ const styles = {
   tab: css`
     background-color: transparent;
     color: grey;
-    font-size: 15px;
+    font-size: 18px;
     width: 100%;
     padding: 10px 8px;
     margin: 6px;
