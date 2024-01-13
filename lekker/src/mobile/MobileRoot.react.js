@@ -5,7 +5,7 @@ import React from 'react';
 import Definition from './Definition.react';
 import './../colorConstants.css';
 import { css } from '@emotion/css';
-import Menu from './Menu.react';
+import Menu from './../Menu.react';
 
 export default function MobileRoot(): React$Node {
   return (

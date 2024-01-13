@@ -1,15 +1,20 @@
 // @flow
 
 import React from 'react';
-import { cocktails } from './../Cocktails';
-import type { Cocktail } from './../Types';
-import DrinksList from './DrinksList.react';
+import { cocktails } from './Cocktails';
+import type { Cocktail } from './Types';
+import DrinksList from './mobile/DrinksList.react';
+import { default as DesktopDrinksList } from './desktop/DesktopDrinksList.react';
 import { Tab, tabClasses } from '@mui/base/Tab';
 import { Tabs } from '@mui/base/Tabs';
 import { TabsList } from '@mui/base/TabsList';
 import { css } from '@emotion/css';
 
-export default function Menu(): React$Node {
+type MenuProps = $ReadOnly<{
+  isDesktop?: boolean,
+}>;
+
+export default function Menu({ isDesktop = false }: MenuProps): React$Node {
   const [tab, setTab] = React.useState('Signature');
 
   const filteredDrinks = useFilteredDrinks(tab);
@@ -35,7 +40,11 @@ export default function Menu(): React$Node {
           },
         )}
       </TabsList>
-      <DrinksList drinks={filteredDrinks} tab={tab} />
+      {isDesktop ? (
+        <DesktopDrinksList drinks={filteredDrinks} tab={tab} />
+      ) : (
+        <DrinksList drinks={filteredDrinks} tab={tab} />
+      )}
     </Tabs>
   );
 }
