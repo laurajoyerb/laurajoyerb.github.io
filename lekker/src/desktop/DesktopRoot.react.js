@@ -2,7 +2,7 @@
 
 import Header from './DesktopHeader.react';
 import React from 'react';
-// import Definition from './Definition.react';
+import DesktopDefinition from './DesktopDefinition.react';
 import './../colorConstants.css';
 import { css } from '@emotion/css';
 // import Menu from './Menu.react';
@@ -21,7 +21,7 @@ export default function DesktopRoot(): React$Node {
         alt="lekker cabinet logo"
       />
       <Header />
-      {/* <Definition /> */}
+      <DesktopDefinition />
       {/* <Menu /> */}
     </div>
   );
