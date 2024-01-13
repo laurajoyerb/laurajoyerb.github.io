@@ -7,7 +7,6 @@ import DrinksList from './DrinksList.react';
 import { Tab, tabClasses } from '@mui/base/Tab';
 import { Tabs } from '@mui/base/Tabs';
 import { TabsList } from '@mui/base/TabsList';
-import { TabPanel } from '@mui/base/TabPanel';
 import { css } from '@emotion/css';
 
 export default function Menu(): React$Node {
