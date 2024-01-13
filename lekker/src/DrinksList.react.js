@@ -16,7 +16,7 @@ export default function DrinksList({ drinks, tab }: Props): React$Node {
     <div className={styles.root}>
       {sections.map(({ label, drinks }) => {
         return (
-          <div className={styles.section}>
+          <div className={styles.section} key={label}>
             {label != null && (
               <div className={styles.sectionHeader}>
                 <div className={styles.sectionLabel}>

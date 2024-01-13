@@ -1,11 +1,14 @@
 // @flow
 
 import React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import { cocktails } from './Cocktails';
 import type { Cocktail } from './Types';
 import DrinksList from './DrinksList.react';
+import { Tab, tabClasses } from '@mui/base/Tab';
+import { Tabs } from '@mui/base/Tabs';
+import { TabsList } from '@mui/base/TabsList';
+import { TabPanel } from '@mui/base/TabPanel';
+import { css } from '@emotion/css';
 
 export default function Menu(): React$Node {
   const [tab, setTab] = React.useState('Signature');
@@ -13,18 +16,28 @@ export default function Menu(): React$Node {
   const filteredDrinks = useFilteredDrinks(tab);
 
   return (
-    <>
-      <Tabs
-        value={tab}
-        onChange={(_, tab) => setTab(tab)}
-        textColor="secondary"
-        indicatorColor="secondary">
-        {['Signature', 'Others', 'Non-Alcoholic'].map((item) => {
-          return <Tab value={item} label={item} />;
-        })}
-      </Tabs>
+    <Tabs
+      className={styles.root}
+      defaultValue={'Signature'}
+      onChange={(_, tab) => setTab(tab)}>
+      <TabsList className={styles.tabsList}>
+        {['Signature', 'Others', 'Non-Alcoholic'].map(
+          (item, index, categories) => {
+            return (
+              <div className={styles.tabOuter} key={item}>
+                <Tab className={styles.tab} value={item}>
+                  {item.toLocaleUpperCase()}
+                </Tab>
+                {index + 1 === categories.length ? null : (
+                  <div className={styles.divider} />
+                )}
+              </div>
+            );
+          },
+        )}
+      </TabsList>
       <DrinksList drinks={filteredDrinks} tab={tab} />
-    </>
+    </Tabs>
   );
 }
 
@@ -49,3 +62,45 @@ function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
         );
   }
 }
+
+// Style
+
+const styles = {
+  root: css`
+    min-width: 100%;
+  `,
+  tabsList: css`
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-between;
+    padding: 0px 10px;
+  `,
+  tab: css`
+    background-color: transparent;
+    color: grey;
+    font-size: 15px;
+    width: 100%;
+    padding: 10px 8px;
+    margin: 6px;
+    border-radius: 7px;
+    border: none;
+    display: flex;
+    justify-content: center;
+
+    &.${tabClasses.selected} {
+      color: black;
+    }
+  `,
+  tabOuter: css`
+    display: flex;
+  `,
+  divider: css`
+    background-color: var(--light-purple);
+    width: 0.1em;
+    height: 1.5em;
+    display: flex;
+    align-self: center;
+  `,
+};
