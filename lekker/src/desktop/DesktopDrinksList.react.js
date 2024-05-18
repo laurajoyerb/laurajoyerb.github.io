@@ -19,6 +19,7 @@ export default function DrinksList({ drinks, tab }: Props): React$Node {
           <div className={styles.section} key={label}>
             {label != null && (
               <div className={styles.sectionHeader}>
+                <div className={styles.horizLine} />
                 <div className={styles.sectionLabel}>
                   {label?.toUpperCase()}
                 </div>
@@ -132,11 +133,12 @@ const styles = {
   `,
   sectionHeader: css`
     text-align: start;
-    padding: 0px 14px;
     font-size: 20px;
     font-weight: 600;
     display: flex;
     align-items: center;
+    width: 55%;
+    align-self: center;
   `,
   sectionLabel: css`
     min-width: fit-content;
