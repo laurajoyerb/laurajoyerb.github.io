@@ -26,14 +26,21 @@ export default function DrinksList({ drinks, tab }: Props): React$Node {
                 <div className={styles.horizLine} />
               </div>
             )}
-            {drinks.map((drink) => (
-              <div className={styles.drink} key={drink.name}>
-                <div className={styles.title}>{drink.name.toUpperCase()}</div>
-                <div className={styles.ingredients}>
-                  {drink.ingredients.join(', ')}
+            <div
+              className={
+                tab === 'Non-Alcoholic'
+                  ? styles.nonAlcoholicDrinks
+                  : styles.drinks
+              }>
+              {drinks.map((drink) => (
+                <div className={styles.drink} key={drink.name}>
+                  <div className={styles.title}>{drink.name.toUpperCase()}</div>
+                  <div className={styles.ingredients}>
+                    {drink.ingredients.join(', ')}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         );
       })}
@@ -125,6 +132,7 @@ const styles = {
     flex-direction: column;
   `,
   section: css`
+    align-items: center;
     display: flex;
     gap: 14px;
     flex-direction: column;
@@ -148,6 +156,17 @@ const styles = {
     width: 100%;
     height: 0px;
     margin: 8px;
+  `,
+  drinks: css`
+    display: grid;
+    row-gap: 24px;
+    column-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    width: max-content;
+  `,
+  nonAlcoholicDrinks: css`
+    display: grid;
+    row-gap: 18px;
   `,
   drink: css`
     display: flex;
