@@ -107,7 +107,7 @@ const styles = {
   divider: css`
     background-color: var(--light-purple);
     width: 0.1em;
-    height: 1.5em;
+    height: 1em;
     display: flex;
     align-self: center;
   `,

@@ -27,8 +27,6 @@ const styles = {
     display: flex;
     font-size: 13px;
     padding: 15px;
-    position: fixed;
-    bottom: 2px;
   `,
   pronunciation: css`
     padding-right: 10px;
