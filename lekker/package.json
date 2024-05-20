@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "flow": "flow"
   },
-  "homepage": "https://laurajoyerb.github.io/lekkerapp",
+  "homepage": "https://laurajoyerb.github.io/",
   "eslintConfig": {
     "extends": [
       "react-app",
