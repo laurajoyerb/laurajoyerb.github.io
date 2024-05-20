@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lekkerapp/static/css/main.7aceaf8f.css",
+    "main.js": "/lekkerapp/static/js/main.8212bf40.js",
+    "index.html": "/lekkerapp/index.html",
+    "main.7aceaf8f.css.map": "/lekkerapp/static/css/main.7aceaf8f.css.map",
+    "main.8212bf40.js.map": "/lekkerapp/static/js/main.8212bf40.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7aceaf8f.css",
+    "static/js/main.8212bf40.js"
+  ]
+}
