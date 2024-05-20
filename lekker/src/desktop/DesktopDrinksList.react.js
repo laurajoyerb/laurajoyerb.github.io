@@ -159,8 +159,8 @@ const styles = {
   `,
   drinks: css`
     display: grid;
-    row-gap: 24px;
     column-gap: 10px;
+    row-gap: 24px;
     grid-template-columns: 1fr 1fr;
     width: max-content;
   `,
