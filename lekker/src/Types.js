@@ -13,17 +13,24 @@ export type Ingredient =
   | 'lemon'
   | 'cola'
   | 'whiskey'
-  | 'angostura bitters'
+  | 'bitters'
+  | 'orange bitters'
   | 'champagne'
   | 'elderflower liqueur'
   | 'club soda'
   | 'Cointreau'
   | 'dry vermouth'
   | 'Irish cream liqueur'
+  | 'white wine'
   | 'coffee liqueur'
   | 'lillet blanc'
   | 'St. Germain'
+  | 'maraschino'
+  | 'amarula'
+  | 'aperol'
   | 'sugar';
+
+type Recipe = { [Ingredient]: number };
 
 export type Cocktail = {
   ingredients: $ReadOnlyArray<Ingredient>,
@@ -31,4 +38,5 @@ export type Cocktail = {
   strength: number,
   signature: boolean,
   nonalcoholic: boolean,
+  recipe?: Recipe,
 };
