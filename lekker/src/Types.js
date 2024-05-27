@@ -15,6 +15,7 @@ export type Ingredient =
   | 'whiskey'
   | 'bitters'
   | 'orange bitters'
+  | 'chambord'
   | 'champagne'
   | 'elderflower liqueur'
   | 'club soda'
@@ -22,8 +23,12 @@ export type Ingredient =
   | 'dry vermouth'
   | 'Irish cream liqueur'
   | 'white wine'
+  | 'red wine'
+  | 'milk'
+  | 'water'
   | 'coffee liqueur'
   | 'lillet blanc'
+  | 'Lillet Blanc'
   | 'St. Germain'
   | 'maraschino'
   | 'amarula'
@@ -39,4 +44,5 @@ export type Cocktail = {
   signature: boolean,
   nonalcoholic: boolean,
   recipe?: Recipe,
+  notes?: string,
 };
