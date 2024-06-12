@@ -67,6 +67,34 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
     nonalcoholic: true,
   },
   {
+    name: 'Tanqueray Flor de Sevilla Gin & Tonic',
+    ingredients: [],
+    strength: 0,
+    signature: false,
+    nonalcoholic: true,
+  },
+  {
+    name: 'Spark Non-Alcoholic Wine',
+    ingredients: [],
+    strength: 0,
+    signature: false,
+    nonalcoholic: true,
+  },
+  {
+    name: 'Rose & Elderflower Spritz',
+    ingredients: [],
+    strength: 0,
+    signature: false,
+    nonalcoholic: true,
+  },
+  {
+    name: 'Ginger Spritz',
+    ingredients: [],
+    strength: 0,
+    signature: false,
+    nonalcoholic: true,
+  },
+  {
     name: 'Sparkling water',
     ingredients: [],
     strength: 0,
@@ -130,6 +158,7 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
     strength: 2,
     signature: true,
     nonalcoholic: false,
+    recipe: { gin: 2, champagne: 4, lemon: 1, 'elderflower liqueur': 2 },
   },
   {
     name: 'Gin Daisy',
