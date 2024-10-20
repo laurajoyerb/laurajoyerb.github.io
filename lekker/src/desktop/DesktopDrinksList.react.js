@@ -2,6 +2,7 @@
 
 import React from 'react';
 import type { Cocktail } from './../Types';
+import getSections from './../utils/getSections';
 import { css } from '@emotion/css';
 
 type Props = $ReadOnly<{
@@ -46,80 +47,6 @@ export default function DrinksList({ drinks, tab }: Props): React$Node {
       })}
     </div>
   );
-}
-
-// Helpers
-
-type Section = $ReadOnly<{
-  label: ?string,
-  drinks: $ReadOnlyArray<Cocktail>,
-}>;
-
-function getSections(
-  drinks: $ReadOnlyArray<Cocktail>,
-  tab: string,
-): $ReadOnlyArray<Section> {
-  switch (tab) {
-    case 'Signature':
-    default:
-      return [{ label: null, drinks: drinks }];
-    case 'Non-Alcoholic':
-      return [
-        {
-          label: 'Hot Beverages',
-          drinks: drinks.filter((drink) =>
-            ['Coffee', 'Tea', 'Hot Tang', 'Hot Cocoa'].includes(drink.name),
-          ),
-        },
-        {
-          label: 'Soda',
-          drinks: drinks.filter(
-            (drink) =>
-              !['Coffee', 'Tea', 'Hot Tang', 'Hot Cocoa'].includes(drink.name),
-          ),
-        },
-      ];
-
-    case 'Others': {
-      return [
-        {
-          label: 'Whiskey',
-          drinks: drinks.filter((drink) =>
-            drink.ingredients.includes('whiskey'),
-          ),
-        },
-        {
-          label: 'Gin',
-          drinks: drinks.filter((drink) => drink.ingredients.includes('gin')),
-        },
-        {
-          label: 'Vodka',
-          drinks: drinks.filter((drink) => drink.ingredients.includes('vodka')),
-        },
-        {
-          label: 'Tequila',
-          drinks: drinks.filter((drink) =>
-            drink.ingredients.includes('tequila'),
-          ),
-        },
-        {
-          label: 'Rum',
-          drinks: drinks.filter((drink) => drink.ingredients.includes('rum')),
-        },
-        {
-          label: 'Wild cards',
-          drinks: drinks.filter(
-            (drink) =>
-              !drink.ingredients.includes('whiskey') &&
-              !drink.ingredients.includes('gin') &&
-              !drink.ingredients.includes('vodka') &&
-              !drink.ingredients.includes('tequila') &&
-              !drink.ingredients.includes('rum'),
-          ),
-        },
-      ];
-    }
-  }
 }
 
 // Styles

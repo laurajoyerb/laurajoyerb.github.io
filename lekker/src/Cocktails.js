@@ -109,6 +109,13 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
     nonalcoholic: false,
   },
   {
+    name: 'Whiskey sour',
+    ingredients: ['whiskey', 'lemon', 'simple syrup'],
+    strength: 2,
+    signature: true,
+    nonalcoholic: false,
+  },
+  {
     name: 'Queen Elizabeth',
     ingredients: ['rum', 'lime', 'grenadine'],
     strength: 3,
@@ -139,20 +146,6 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
     nonalcoholic: false,
   },
   {
-    name: 'Mark Twain Cocktail',
-    ingredients: ['whiskey', 'lemon', 'simple syrup', 'bitters'],
-    strength: 2,
-    signature: true,
-    nonalcoholic: false,
-  },
-  {
-    name: 'Whiskey sour',
-    ingredients: ['whiskey', 'lemon', 'simple syrup'],
-    strength: 2,
-    signature: true,
-    nonalcoholic: false,
-  },
-  {
     name: 'The LJ 75',
     ingredients: ['gin', 'champagne', 'lemon', 'elderflower liqueur'],
     strength: 2,
@@ -163,6 +156,13 @@ export const cocktails: $ReadOnlyArray<Cocktail> = [
   {
     name: 'Gin Daisy',
     ingredients: ['gin', 'lemon', 'grenadine', 'simple syrup', 'club soda'],
+    strength: 2,
+    signature: true,
+    nonalcoholic: false,
+  },
+  {
+    name: 'Mark Twain Cocktail',
+    ingredients: ['whiskey', 'lemon', 'simple syrup', 'bitters'],
     strength: 2,
     signature: true,
     nonalcoholic: false,
