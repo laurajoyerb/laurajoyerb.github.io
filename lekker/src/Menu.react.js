@@ -75,8 +75,11 @@ const styles = {
     min-width: fit-content;
   `,
   tabsList: css`
+    position: sticky;
+    top: 12px;
     border-radius: 36px;
     margin: 10px auto;
+    padding: 6px 6px;
     display: flex;
     width: fit-content;
     align-items: center;
@@ -89,7 +92,7 @@ const styles = {
     color: grey;
     font-size: 18px;
     width: fit-content;
-    padding: 10px 16px;
+    padding: 6px 16px;
     border-radius: 36px;
     border: none;
     display: flex;
