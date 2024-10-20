@@ -3,6 +3,9 @@
   --purple: #a968a2;
   --dark-purple: #70066f;
   --light-purple: #d4b2c8;
+  --transparent-purple: rgba(212, 178, 200, 0.5);
+  --tab-background: #F9F5F0;
+  --tab-selected: rgba(212, 178, 200, 0.5);
   --text: #343d61;
 }
 

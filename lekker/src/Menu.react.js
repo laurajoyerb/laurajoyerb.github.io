@@ -32,9 +32,6 @@ export default function Menu({ isDesktop = false }: MenuProps): React$Node {
                 <Tab className={styles.tab} value={item}>
                   {item}
                 </Tab>
-                {index + 1 === categories.length ? null : (
-                  <div className={styles.divider} />
-                )}
               </div>
             );
           },
@@ -75,40 +72,35 @@ function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
 
 const styles = {
   root: css`
-    min-width: 100%;
+    min-width: fit-content;
   `,
   tabsList: css`
-    border-radius: 12px;
+    border-radius: 36px;
+    margin: 10px auto;
     display: flex;
+    width: fit-content;
     align-items: center;
     justify-content: center;
     align-content: space-between;
-    padding: 0px 10px;
+    background-color: var(--tab-background);
   `,
   tab: css`
     background-color: transparent;
     color: grey;
     font-size: 18px;
-    width: 100%;
-    padding: 10px 8px;
-    margin: 6px;
-    border-radius: 7px;
+    width: fit-content;
+    padding: 10px 16px;
+    border-radius: 36px;
     border: none;
     display: flex;
     justify-content: center;
 
     &.${tabClasses.selected} {
-      color: black;
+      color: var(--dark-purple);
+      background-color: var(--tab-selected);
     }
   `,
   tabOuter: css`
     display: flex;
-  `,
-  divider: css`
-    background-color: var(--light-purple);
-    width: 0.1em;
-    height: 1em;
-    display: flex;
-    align-self: center;
   `,
 };
