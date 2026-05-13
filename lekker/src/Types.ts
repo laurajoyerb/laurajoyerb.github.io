@@ -55,6 +55,15 @@ export type Ingredient =
   | 'athletic'
   | 'humm'
   | 'egg white'
+  | 'mint'
+  | 'cranberry juice'
+  | 'orange juice'
+  | 'pineapple juice'
+  | 'grapefruit juice'
+  | 'lemon juice'
+  | 'lime juice'
+  | 'ginger beer'
+  | 'cognac'
   | 'sugar';
 
 type Recipe = {
