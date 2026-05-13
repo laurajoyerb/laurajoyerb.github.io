@@ -28,7 +28,10 @@ export default function getSections(
       const naBeer = drinks.filter((drink) => drink.name.includes('Athletic'));
 
       const theRest = drinks.filter(
-        (drink) => !hot.includes(drink) && !mocktails.includes(drink),
+        (drink) =>
+          !hot.includes(drink) &&
+          !mocktails.includes(drink) &&
+          !naBeer.includes(drink),
       );
 
       return [
