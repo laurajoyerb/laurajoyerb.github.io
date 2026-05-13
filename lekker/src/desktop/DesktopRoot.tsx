@@ -1,13 +1,12 @@
 // @flow
 
-import Header from './Header.react';
+import Header from './DesktopHeader.tsx';
 import React from 'react';
-import Definition from './Definition.react';
-import './../colorConstants.css';
+import Definition from './DesktopDefinition.tsx';
 import { css } from '@emotion/css';
-import Menu from './../Menu.react';
+import Menu from './../Menu.tsx';
 
-export default function MobileRoot(): React$Node {
+export default function DesktopRoot() {
   return (
     <div className={styles.root}>
       <img
@@ -22,7 +21,7 @@ export default function MobileRoot(): React$Node {
       />
       <Header />
       <Definition />
-      <Menu />
+      <Menu isDesktop={true} />
     </div>
   );
 }

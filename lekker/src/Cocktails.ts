@@ -1,8 +1,8 @@
 // @flow
 
-import type { Cocktail } from './Types';
+import type { Cocktail } from './Types.ts';
 
-export const cocktails: $ReadOnlyArray<Cocktail> = [
+export const cocktails: ReadonlyArray<Cocktail> = [
   {
     name: 'Coffee',
     ingredients: [],

@@ -1,50 +1,46 @@
-// @flow
-
 import React from 'react';
-import { cocktails } from './Cocktails';
-import type { Cocktail, Ingredient } from './Types';
-import DrinksList from './mobile/DrinksList.react';
-import { default as DesktopDrinksList } from './desktop/DesktopDrinksList.react';
+import { cocktails } from './Cocktails.ts';
+import DrinksList from './mobile/DrinksList.tsx';
+import { default as DesktopDrinksList } from './desktop/DesktopDrinksList.tsx';
 import { Tab, tabClasses } from '@mui/base/Tab';
 import { Tabs } from '@mui/base/Tabs';
 import { TabsList } from '@mui/base/TabsList';
 import { css } from '@emotion/css';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import AddIcon from '@mui/icons-material/Add';
+// import Chip from '@mui/material/Chip';
+// import Stack from '@mui/material/Stack';
+// import AddIcon from '@mui/icons-material/Add';
+import { Cocktail } from './Types';
 
-type MenuProps = $ReadOnly<{
-  isDesktop?: boolean,
-}>;
+export default function Menu({ isDesktop = false }) {
+  const [tab, setTab] = React.useState<string>('Signature');
+  // const [selectedIngredients, setSelectedIngredients] = React.useState<Ingredient[]>([]);
+  // const [unselectedIngredients, setUnselectedIngredients] = React.useState<Ingredient[]>([
+  //   'whiskey',
+  //   'gin',
+  //   'rum',
+  //   'tequila',
+  //   'vodka',
+  // ]);
 
-export default function Menu({ isDesktop = false }: MenuProps): React$Node {
-  const [tab, setTab] = React.useState('Signature');
-  const [selectedIngredients, setSelectedIngredients] = React.useState<
-    $ReadOnlyArray<Ingredient>,
-  >([]);
-  const [unselectedIngredients, setUnselectedIngredients] = React.useState<
-    $ReadOnlyArray<Ingredient>,
-  >(['whiskey', 'gin', 'rum', 'tequila', 'vodka']);
+  // const handleAddIngredient = (ingredient: Ingredient) => {
+  //   setSelectedIngredients([...selectedIngredients, ingredient]);
+  //   setUnselectedIngredients(
+  //     unselectedIngredients.filter((i) => i !== ingredient),
+  //   );
+  // };
 
-  const handleAddIngredient = (ingredient: Ingredient) => {
-    setSelectedIngredients([...selectedIngredients, ingredient]);
-    setUnselectedIngredients(
-      unselectedIngredients.filter((i) => i !== ingredient),
-    );
-  };
+  // const handleRemoveIngredient = (ingredient: Ingredient) => {
+  //   setSelectedIngredients(selectedIngredients.filter((i) => i !== ingredient));
+  //   setUnselectedIngredients([...unselectedIngredients, ingredient]);
+  // };
 
-  const handleRemoveIngredient = (ingredient: Ingredient) => {
-    setSelectedIngredients(selectedIngredients.filter((i) => i !== ingredient));
-    setUnselectedIngredients([...unselectedIngredients, ingredient]);
-  };
-
-  const filteredDrinks = useFilteredDrinks(tab);
+  const filteredDrinks = useFilteredDrinks(tab ?? 'Signature');
 
   return (
     <Tabs
       className={styles.root}
       defaultValue={'Signature'}
-      onChange={(_, tab) => setTab(tab)}>
+      onChange={(_, tab) => setTab(typeof tab === 'string' ? tab : 'Signature')}>
       <TabsList className={styles.tabsList}>
         {['Signature', 'Others', 'Non-Alcoholic'].map(
           (item, index, categories) => {
@@ -92,7 +88,7 @@ export default function Menu({ isDesktop = false }: MenuProps): React$Node {
 
 // Helpers
 
-function useFilteredDrinks(tab: string): $ReadOnlyArray<Cocktail> {
+function useFilteredDrinks(tab: string): ReadonlyArray<Cocktail> {
   switch (tab) {
     case 'Signature':
       return cocktails.filter(

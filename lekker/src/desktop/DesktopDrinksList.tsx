@@ -1,16 +1,16 @@
 // @flow
 
 import React from 'react';
-import type { Cocktail } from './../Types';
-import getSections from './../utils/getSections';
+import type { Cocktail } from '../Types.ts';
+import getSections from '../utils/getSections.ts';
 import { css } from '@emotion/css';
 
-type Props = $ReadOnly<{
-  drinks: $ReadOnlyArray<Cocktail>,
+type Props = Readonly<{
+  drinks: ReadonlyArray<Cocktail>,
   tab: string,
 }>;
 
-export default function DrinksList({ drinks, tab }: Props): React$Node {
+export default function DrinksList({ drinks, tab }: Props) {
   const sections = getSections(drinks, tab);
 
   return (

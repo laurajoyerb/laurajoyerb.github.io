@@ -33,16 +33,24 @@ export type Ingredient =
   | 'maraschino'
   | 'amarula'
   | 'aperol'
+  | 'pomeranate liqueur'
+  | 'ginger liqueur'
+  | 'creme de violette'
+  | 'creme de menthe'
+  | 'amaretto'
+  | 'orgeat'
   | 'sugar';
 
-type Recipe = { [Ingredient]: number };
+type Recipe = {
+  [K in Ingredient]?: number;
+};
 
 export type Cocktail = {
-  ingredients: $ReadOnlyArray<Ingredient>,
-  name: string,
-  strength: number,
-  signature: boolean,
-  nonalcoholic: boolean,
-  recipe?: Recipe,
-  notes?: string,
+  ingredients: ReadonlyArray<Ingredient>;
+  name: string;
+  strength: number;
+  signature: boolean;
+  nonalcoholic: boolean;
+  recipe?: Recipe;
+  notes?: string;
 };

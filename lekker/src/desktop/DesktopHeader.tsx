@@ -3,7 +3,7 @@
 import { css } from '@emotion/css';
 import React from 'react';
 
-export default function DesktopHeader(): React$Node {
+export default function DesktopHeader() {
   return (
     <div className={styles.root}>
       <img

@@ -3,13 +3,14 @@
 import { css } from '@emotion/css';
 import React from 'react';
 
-export default function Definition(): React$Node {
+export default function Definition(){
   return (
     <div className={styles.root}>
-      <div>
+      <div className={styles.pronunciation}>
         Lekker
         <br />/ (ˈlɛkə) /
       </div>
+      <div className={styles.divider} />
       <div className={styles.text}>
         Afrikaans, from Dutch, literally ‘delicious’. <br />
         Southern African slang. pleasing or enjoyable. tasty. (informal)
@@ -23,15 +24,20 @@ export default function Definition(): React$Node {
 
 const styles = {
   root: css`
-    display: grid;
-    grid-template-columns: 20vw auto;
-    align-items: center;
-    font-size: 11px;
+    display: flex;
+    font-size: 13px;
     padding: 15px;
   `,
+  pronunciation: css`
+    padding-right: 10px;
+  `,
   text: css`
-    border-left: 1px solid var(--purple);
     text-align: left;
     padding-left: 10px;
+  `,
+  divider: css`
+    width: 1px;
+    height: 2.5em;
+    background-color: var(--purple);
   `,
 };

@@ -3,7 +3,7 @@
 import { css } from '@emotion/css';
 import React from 'react';
 
-export default function Header(): React$Node {
+export default function Header() {
   return (
     <div className={styles.root}>
       <div className={styles.welcome}>Welcome to the</div>
