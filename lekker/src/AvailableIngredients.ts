@@ -2,13 +2,14 @@
 
 import { Ingredient } from './Types';
 
-const availableIngredients: ReadonlyArray<Ingredient> = [
+export const availableIngredients: ReadonlyArray<Ingredient> = [
   // Hard liquors
   'gin',
   'tequila',
   'vodka',
   'whiskey',
   'rum',
+  'vanilla vodka',
 
   // Liqueurs /wines
   'sweet vermouth',
@@ -22,10 +23,11 @@ const availableIngredients: ReadonlyArray<Ingredient> = [
   'dry vermouth',
   'white wine',
   'red wine',
+  'rose wine',
   'coffee liqueur',
   'aperol',
   'St. Germain',
-  'pomeranate liqueur',
+  'pomegranate liqueur',
   'ginger liqueur',
   'creme de violette',
   'creme de menthe',
@@ -35,7 +37,7 @@ const availableIngredients: ReadonlyArray<Ingredient> = [
   //   'Irish cream liqueur',
   //   'amarula',
 
-  // Mixers
+  // Mixers / Non-alcoholic
   'sugar',
   'orgeat',
   'milk',
@@ -45,6 +47,20 @@ const availableIngredients: ReadonlyArray<Ingredient> = [
   'simple syrup',
   'lemon',
   'lime',
+  'egg white',
   // 'cola',
   // 'maraschino',
+  'coffee',
+  // 'tang',
+  'fever-tree elderflower tonic',
+  'fever-tree tonic',
+  // 'fever-tree blood orange soda',
+  // 'fever-tree lemonade',
+  'tea',
+  'cocoa',
+  'olipop',
+  'poppi',
+  'izze',
+  'athletic',
+  'humm',
 ];

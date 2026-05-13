@@ -10,6 +10,7 @@ import { css } from '@emotion/css';
 // import Stack from '@mui/material/Stack';
 // import AddIcon from '@mui/icons-material/Add';
 import { Cocktail } from './Types';
+import { availableIngredients } from './AvailableIngredients.ts';
 
 export default function Menu({ isDesktop = false }) {
   const [tab, setTab] = React.useState<string>('Signature');
@@ -34,7 +35,7 @@ export default function Menu({ isDesktop = false }) {
   //   setUnselectedIngredients([...unselectedIngredients, ingredient]);
   // };
 
-  const filteredDrinks = useFilteredDrinks(tab ?? 'Signature');
+  const filteredDrinks = getFilteredDrinks(tab ?? 'Signature');
 
   return (
     <Tabs
@@ -88,19 +89,25 @@ export default function Menu({ isDesktop = false }) {
 
 // Helpers
 
-function useFilteredDrinks(tab: string): ReadonlyArray<Cocktail> {
+function getFilteredDrinks(tab: string): ReadonlyArray<Cocktail> {
+  const availableCocktails = cocktails.filter(cocktail =>
+    cocktail.ingredients.every(ingredient =>
+      availableIngredients.includes(ingredient),
+    ),
+  );
+
   switch (tab) {
     case 'Signature':
-      return cocktails.filter(
+      return availableCocktails.filter(
         (cocktail: Cocktail) => cocktail.signature === true,
       );
     case 'Non-Alcoholic':
-      return cocktails.filter(
+      return availableCocktails.filter(
         (cocktail: Cocktail) => cocktail.nonalcoholic === true,
-      );
+      ).map(cocktail => ({ ...cocktail, ingredients: [] }));
     case 'Others':
     default:
-      return cocktails
+      return availableCocktails
         .filter((cocktail: Cocktail) => cocktail.nonalcoholic === false)
         .sort((a, b) =>
           a.strength > b.strength ? 1 : a.strength === b.strength ? 0 : -1,

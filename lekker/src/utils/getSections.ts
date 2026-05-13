@@ -24,17 +24,24 @@ export default function getSections(
           drink.name.includes('Wine')
         );
       });
+
+      const naBeer = drinks.filter((drink) => drink.name.includes('Athletic'));
+
       const theRest = drinks.filter(
         (drink) => !hot.includes(drink) && !mocktails.includes(drink),
       );
 
       return [
+        // {
+        //   label: 'Mocktails & Wine',
+        //   drinks: mocktails,
+        // },
         {
-          label: 'Mocktails & Wine',
-          drinks: mocktails,
+          label: 'NA Beer',
+          drinks: naBeer,
         },
         {
-          label: 'Sodas',
+          label: 'Bubbles',
           drinks: theRest,
         },
         {
